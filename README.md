@@ -10,6 +10,11 @@ npm install
 npm run serve
 ```
 
+### Build and Deploy to gh-pages
+```
+npm run deploy
+```
+
 ### Compiles and minifies for production
 ```
 npm run build
