@@ -1,4 +1,4 @@
-# hello-world
+# binaryyard
 
 ## Project setup
 ```
