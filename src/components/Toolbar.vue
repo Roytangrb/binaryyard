@@ -1,9 +1,9 @@
 <template>
   <v-toolbar app>
-    <v-toolbar-side-icon>
+    <v-toolbar-side-icon class="hidden-sm-and-down">
       <v-icon>{{ ToolBarSideIcon }}</v-icon>
     </v-toolbar-side-icon>
-    <v-toolbar-title><strong>Binaryyard</strong></v-toolbar-title>
+    <v-toolbar-title class="hidden-sm-and-down"><strong>Binaryyard</strong></v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items>
       <v-btn flat>About</v-btn>
@@ -40,6 +40,7 @@ export default {
       { title: 'Prototype' },
       { title: 'CMS' },
       { title: 'Workshops' },
+      { title: 'Partners' }
     ]
   }),
   methods:{

@@ -8,6 +8,8 @@
         <HelloWorld msg="Welcome to Your Vue.js App"/>
         <!-- <router-view></router-view> -->
       </v-container>
+      <h1>Partners</h1>
+      <Partners></Partners>
       <h1>Contact Us</h1>
       <Enquiry></Enquiry>
       <Footer></Footer>
@@ -18,6 +20,7 @@
 <script>
 import Toolbar from './components/Toolbar'
 import HelloWorld from './components/HelloWorld'
+import Partners from './components/Partners'
 import Enquiry from './components/Enquiry'
 import Footer from './components/Footer'
 
@@ -26,6 +29,7 @@ export default {
   components: {
     Toolbar,
     HelloWorld,
+    Partners,
     Enquiry,
     Footer
   }
