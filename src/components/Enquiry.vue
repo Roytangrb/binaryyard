@@ -1,95 +1,98 @@
 <template>
-  <v-form ref="form" >
-    <v-container grid-list-xl>
-      <v-layout
-        wrap
-        justify-center
-      >
-        <v-flex xs12 md4>
-          <!-- Input Fields -->
-          <v-text-field
-            v-model="model_name"
-            placeholder="Your name: "
-            :rules="rules_name"
-            label="Name"
-            required
-          ></v-text-field>
-          <v-text-field
-            v-model="model_email"
-            placeholder="example@example.com"
-            :rules="rules_email"
-            label="Email"
-            required
-          ></v-text-field>
-        </v-flex>
+  <div>
+    <h1>Contact Us</h1>
+    <v-form ref="form" >
+      <v-container grid-list-xl>
+        <v-layout
+          wrap
+          justify-center
+        >
+          <v-flex xs12 md4>
+            <!-- Input Fields -->
+            <v-text-field
+              v-model="model_name"
+              placeholder="Your name: "
+              :rules="rules_name"
+              label="Name"
+              required
+            ></v-text-field>
+            <v-text-field
+              v-model="model_email"
+              placeholder="example@example.com"
+              :rules="rules_email"
+              label="Email"
+              required
+            ></v-text-field>
+          </v-flex>
 
-        <v-flex xs12 md6>
-          <v-textarea
-            v-model="model_message"
-            placeholder="Drop us a messge:"
-            :counter="max"
-            :rules="rules_message"
-            label="Message"
-            required
-          ></v-textarea>
-        </v-flex>
-        <!-- Input Fields -->
-        <!-- Submission -->
-        <v-flex xs12>
-          <div class="text-xs-center">
-            <v-dialog
-              v-model="dialog"
-              width="500"
-              :disabled="!valid"
-            >
-              <template v-slot:activator="{ on }">
-                <v-btn
-                  :color="valid? 'red lighten-2' : 'grey lighten-2'"
-                  dark
-                  v-on="on"
-                >
-                  Send
-                </v-btn>
-              </template>
-        
-              <v-card>
-                <v-card-title
-                  class="headline grey lighten-2"
-                  primary-title
-                >
-                  Privacy Policy
-                </v-card-title>
-        
-                <v-card-text>{{ dialogText }}</v-card-text>
-        
-                <v-divider></v-divider>
-        
-                <v-card-actions>
-                  <v-spacer></v-spacer>
+          <v-flex xs12 md6>
+            <v-textarea
+              v-model="model_message"
+              placeholder="Drop us a messge:"
+              :counter="max"
+              :rules="rules_message"
+              label="Message"
+              required
+            ></v-textarea>
+          </v-flex>
+          <!-- Input Fields -->
+          <!-- Submission -->
+          <v-flex xs12>
+            <div class="text-xs-center">
+              <v-dialog
+                v-model="dialog"
+                width="500"
+                :disabled="!valid"
+              >
+                <template v-slot:activator="{ on }">
                   <v-btn
-                    color="secondary"
-                    flat
-                    @click="back"
+                    :color="valid? 'red lighten-2' : 'grey lighten-2'"
+                    dark
+                    v-on="on"
                   >
-                    Back
+                    Send
                   </v-btn>
-                  <v-btn
-                    color="primary"
-                    flat
-                    @click="submit"
-                    :disabled="submitted"
+                </template>
+          
+                <v-card>
+                  <v-card-title
+                    class="headline grey lighten-2"
+                    primary-title
                   >
-                    {{submitButtonText}}
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-dialog>
-          </div>
-        </v-flex>
-        <!-- Submission -->
-      </v-layout>
-    </v-container>
-  </v-form>
+                    Privacy Policy
+                  </v-card-title>
+          
+                  <v-card-text>{{ dialogText }}</v-card-text>
+          
+                  <v-divider></v-divider>
+          
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn
+                      color="secondary"
+                      flat
+                      @click="back"
+                    >
+                      Back
+                    </v-btn>
+                    <v-btn
+                      color="primary"
+                      flat
+                      @click="submit"
+                      :disabled="submitted"
+                    >
+                      {{submitButtonText}}
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
+            </div>
+          </v-flex>
+          <!-- Submission -->
+        </v-layout>
+      </v-container>
+    </v-form>
+  </div>
 </template>
 
 <script>

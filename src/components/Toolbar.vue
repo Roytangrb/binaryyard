@@ -125,11 +125,14 @@ export default {
   }),
   methods:{
     sectionClickHandler (section) {
-      this.drawer = !this.drawer
+      this.drawer = false
+
       switch(section.title){
         case 'home':
+          this.$router.push('/home')
           break
         case 'contact':
+          this.$router.push('/enquiry')
           break
         case 'Prototype':
           break
@@ -138,6 +141,7 @@ export default {
         case 'Workshops':
           break
         case 'Partners':
+          this.$router.push('/partners')
           break
         default:
           break
