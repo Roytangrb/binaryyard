@@ -1,11 +1,10 @@
 <template>
   <v-app id="app">
-    <!-- <v-navigation-drawer app></v-navigation-drawer> -->
     <Toolbar></Toolbar>
     <v-content>
       <v-container fluid>
         <img alt="Vue logo" src="./assets/logo.png">
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <HelloWorld msg="Welcome to Binaryyard"/>
         <!-- <router-view></router-view> -->
       </v-container>
       <h1>Partners</h1>
